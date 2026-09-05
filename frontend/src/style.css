@@ -1,0 +1,52 @@
+/* Shared visual tokens from the reference design. */
+:root, [data-theme="sage-green"] {
+  --app-bg: #F3F4F0; --app-card-bg: #FFFFFF; --app-primary: #A8B5A0; --app-primary-light: #C5CFBE;
+  --app-primary-dark: #8A9A82; --app-text: #4A5248; --app-text-light: #8B9488; --app-border: #E3E6E0;
+  --app-success: #B8D0B0; --app-danger: #D4A8A0; --app-warning: #DCC89E; --app-cat-study: #C9DCF0;
+  --app-cat-study-dark: #657783; --app-cat-work: #B8C8BF; --app-cat-work-dark: #65776D; --app-cat-life: #D2BCB7; --app-cat-life-dark: #826C68;
+}
+[data-theme="dreamy-blue"] {
+  --app-bg: #F5F5F8; --app-card-bg: #FFFFFF; --app-primary: #99A4BC; --app-primary-light: #B8C0D4;
+  --app-primary-dark: #7D8EAA; --app-text: #4A5260; --app-text-light: #8A93A3; --app-border: #E3E5EB;
+  --app-success: #B0C8B8; --app-danger: #D0A8B0; --app-warning: #D8C498; --app-cat-study: #C9DCF0;
+  --app-cat-study-dark: #657783; --app-cat-work: #B8C8BF; --app-cat-work-dark: #65776D; --app-cat-life: #D2BCB7; --app-cat-life-dark: #826C68;
+}
+[data-theme="grey-pink"] {
+  --app-bg: #F7F2F2; --app-card-bg: #FFFFFF; --app-primary: #D4A5A5; --app-primary-light: #E0C4C4;
+  --app-primary-dark: #BC8A8A; --app-text: #5A4E4E; --app-text-light: #9A8888; --app-border: #EDE4E4;
+  --app-success: #C0D4B8; --app-danger: #D4A0A0; --app-warning: #DDCA9E; --app-cat-study: #C9DCF0;
+  --app-cat-study-dark: #657783; --app-cat-work: #B8C8BF; --app-cat-work-dark: #65776D; --app-cat-life: #D2BCB7; --app-cat-life-dark: #826C68;
+}
+[data-theme="grey-purple"] {
+  --app-bg: #F5F3F7; --app-card-bg: #FFFFFF; --app-primary: #B5A8C0; --app-primary-light: #D0C5D8;
+  --app-primary-dark: #9E90B0; --app-text: #4E4858; --app-text-light: #8E88A0; --app-border: #E5E0EC;
+  --app-success: #B8D0B0; --app-danger: #D0A8B8; --app-warning: #DCC8A0; --app-cat-study: #C9DCF0;
+  --app-cat-study-dark: #657783; --app-cat-work: #B8C8BF; --app-cat-work-dark: #65776D; --app-cat-life: #D2BCB7; --app-cat-life-dark: #826C68;
+}
+[data-theme="warm-apricot"] {
+  --app-bg: #F8F4EF; --app-card-bg: #FFFFFF; --app-primary: #D4B896; --app-primary-light: #E0CDB5;
+  --app-primary-dark: #BCA07C; --app-text: #5A4E40; --app-text-light: #9A8878; --app-border: #EDE4D8;
+  --app-success: #C0D0B0; --app-danger: #D4A898; --app-warning: #DECA9E; --app-cat-study: #C9DCF0;
+  --app-cat-study-dark: #657783; --app-cat-work: #B8C8BF; --app-cat-work-dark: #65776D; --app-cat-life: #D2BCB7; --app-cat-life-dark: #826C68;
+}
+
+:root, [data-theme] {
+  --el-color-primary: var(--app-primary); --el-color-primary-light-3: var(--app-primary-light);
+  --el-color-primary-light-5: color-mix(in srgb, var(--app-primary) 65%, white);
+  --el-color-primary-light-7: color-mix(in srgb, var(--app-primary) 35%, white);
+  --el-color-primary-light-9: color-mix(in srgb, var(--app-primary) 12%, white);
+  --el-color-primary-dark-2: var(--app-primary-dark);
+  --app-radius: 16px; --app-shadow: 0 2px 12px rgba(74, 82, 72, .06);
+}
+
+* { box-sizing: border-box; font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+body { margin: 0; background: var(--app-bg); color: var(--app-text); transition: background-color .2s ease, color .2s ease; }
+#app { min-height: 100vh; }
+.el-card { background-color: var(--app-card-bg); border-color: var(--app-border); border-radius: var(--app-radius); box-shadow: var(--app-shadow); }
+.el-dialog, .el-message-box { background-color: var(--app-card-bg); border-radius: var(--app-radius); }
+.el-button, .el-input__wrapper, .el-textarea__inner { border-radius: var(--app-radius); }
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-thumb { background: var(--app-border); border-radius: 999px; }
+@keyframes breathe { 0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--app-primary) 35%, transparent), 0 8px 32px color-mix(in srgb, var(--app-primary) 25%, transparent); } 50% { box-shadow: 0 0 0 18px transparent, 0 8px 32px color-mix(in srgb, var(--app-primary) 25%, transparent); } }
+.breathe-glow { animation: breathe 3s ease-in-out infinite; }
+:focus-visible { outline: 2px solid var(--app-primary); outline-offset: 2px; }

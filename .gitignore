@@ -1,0 +1,32 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Python 虚拟环境（体积巨大，不提交）
+venv/
+backend/venv/
+
+# ===== 密钥 / 环境变量（绝对不要把 API Key 提交进来）=====
+.env
+.env.*
+!.env.example
+
+# ===== 本地数据库文件（mood.db 属于本地数据，不提交）=====
+*.db
+*.sqlite3
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+
+# ===== 前端环境配置（不含密钥，需提交）=====
+!frontend/.env.development
+!frontend/.env.production
+
+# ===== 文档 / 打包 / 临时文件 =====
+*.docx
+~$*
+*.tar.gz
+*.zip
+backend/_tmp_test_logs.py
